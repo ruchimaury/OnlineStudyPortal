@@ -1,0 +1,35 @@
+{% extends "AdminMaster.html" %}
+{% block content %}
+    <h1>dashboard Page</h1>
+    <div class="row">
+
+        <div class="col-sm-3 btn-info" style="min-height: 100px;margin: 3%;background: yellow">
+<div class="col-md-3"style="min-height: 50px;font-size: 15px;font-family: 'Arial Black';margin: 30px 30px">
+    <center> <li><a href ="/AddCources"><i class="fa fa-plus"></i> AddCources</a></li></center>
+</div></div>
+      <div class="col-sm-3 btn-info" style="min-height: 100px;margin: 3%;background: hotpink">
+ <div class="col-md-3"style="min-height: 50px;font-size: 15px;font-family: 'Arial Black';margin: 30px 30px">
+     <center>  <li><a href="/ViewC"><i class="fa fa-eye"></i> ViewCourse</a></li></center></div>
+
+
+
+    </div>
+      <div class="row">
+        <div class="col-sm-3 btn-info" style="min-height: 100px;margin: 3%;background:#761c19">
+
+ <div class="col-md-3"style="min-height: 50px;font-size: 15px;font-family: 'Arial Black';margin: 30px 30px">
+              <center>   <li><a href="/AddMaterial"><i class="fa fa-plus"></i> AddMaterial</a></li></center>
+  </div>
+        </div>
+
+
+
+      </div>
+
+        <div class="col-sm-3 btn-info" style="min-height: 100px;margin: 3%;background: #5bc0de">
+          <div class="col-md-3"style="min-height: 50px;font-size: 15px;font-family: 'Arial Black';margin: 30px 30px">
+              <center>   <li><a href="/Mts"><i class="fa fa-sign-out"></i> Materials</a></li></center></div>
+    </div>
+
+      </div>
+{% endblock content %}

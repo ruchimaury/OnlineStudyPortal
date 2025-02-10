@@ -1,0 +1,137 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+
+
+<style>
+    body{
+        background: hotpink;
+    }
+h1{
+    font-family: Arial Black;
+    color: #761c19;
+}
+</style>
+
+    <script>
+
+    function getCode()
+    {
+        var hexacod="kw3r55gdt4zm17xaWAB3";
+        var code="";
+       for(var i=0;i<=5;i++)
+        {
+        code=code+hexacod[Math.floor(Math.random()*8)];
+        }
+        return code;
+
+    }
+    function f1()
+    {
+        var c=getCode();
+      //  alert(c);
+      document.getElementById("sp1").innerText=c;
+    }
+    window.onload=f1;
+
+    </script>
+    <script>
+         $(document).ready(function (){
+              //copy
+             $("body").on("copy",function (e){
+                  alert("copy not allowed");
+                  e.preventDefault();
+             })
+             $("body").on("cut",function (e){
+                  alert("cut not allowed");
+                  e.preventDefault();
+             })
+             $("body").on("paste",function (e) {
+              alert("paste not allowed");
+                  e.preventDefault();
+          })
+              $("body").on("contextmenu",function (e) {
+              alert(" Right click not allowed");
+                  e.preventDefault();
+          })
+          })
+             </script>
+<style>
+body{
+    background: hotpink;
+}
+</style
+    </head>
+
+
+    <center>   <h1>**SignUp**</h1></center>
+    <div class="row">
+    <div class="col-md-4" style="min-height: 500px ;background: hotpink"></div>
+
+<div class="col-md-4" style="border:1px solid black;min-height: 500px;border-radius: 1px;font-size: 15px;  background: white;color: black;padding: 30px 0px">
+
+<form action="/regData/" method="post">
+    {% csrf_token %}
+Name<input type="text" name="name" placeholder="Enter Your Name"style="width:80%"><br><br>
+
+    Course<select size="1" name="course"style="width:80%">
+    <option>Course</option>
+    <option>B.tech</option>
+    <option>Diploma</option>
+    <option>Bsc</option>
+    <option>M.tech</option>
+</select><br><br>
+   Gender:
+    <lable for="Gender"></lable>
+    <select name="gender"style="width:80%">
+
+        <option value="none" selected>Gender</option>
+        <option value="Male">Male</option>
+        <option value="Fmale">Female</option>
+    </select><br><br>
+
+ mob<input type="number" name="mob" placeholder="mob."style="width:80%"/><br><br>
+
+   Address <input type="text" name="add" placeholder="ADD"style="width:80%"><br><br>
+
+    EMAIL   <input type="email" name="email" placeholder="Email" style="width:80%"><br><br>
+PASSWD  <input type="PASSWORD" name="passwd" placeholder="passwd"style="width:80%"><br><br>
+    CITY<input type="text" name="city" placeholder="City" style="width:80%"><br><br>
+State:
+    <lable for="State" ></lable>
+    <select name="state"style="width:80%" >
+
+        <option value="course" selected >Uttar Predesh </option>
+        <option value="course">Uttra Khand</option>
+        <option value="course">Bihar</option>
+              <option value="course">Panajab</option>
+    </select>
+    <div style="font-size: 25px">
+        <span for="Captcha Code" id="sp1" ><br><br>g7t47fk</span><br></div>
+    <span onclick="f1()" class="fa fa-refresh"></span>
+
+    <input type="text" id="captcha" placeholder="Enter Captcha Code" name="Captcha" required><br><br>
+
+    <button type="submit" value="submit">Submit</button>
+     <button type="reset" value="submit">reset</button>
+
+
+
+
+</form>
+
+</div>
+    <div class="row">
+            <div class="col-md-4"style="min-height: 500px; background:hotpink"></div>
+
+</div>
+    </div>
+
+
+    </body>
+
+
+</html>
+
+
+{% endblock content %}

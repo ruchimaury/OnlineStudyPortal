@@ -1,0 +1,42 @@
+{% extends "master.html" %}
+{% block content %}
+  {% load static %}
+<html>
+        <head>
+
+            <style>
+
+
+
+                h1{
+                    font-family: "Arial Black";
+
+                }
+            </style>
+        </head>
+
+    <div>
+        <div class="container-fluid">
+   <div class="row">
+        <div class="col-md-12"style="min-height: 70px;background: black;color: snow;font-size: 30px">
+            <marquee direction="left";scrollamount="30">**MY PROFILE**</marquee>
+
+        </div>
+    </div>
+            <div class="row">
+                <div class="col-md-5"style="min-height: 400px;background: lightcoral;border: 2px solid black;padding: 30px;margin: 20px 30px;text-align: center">
+            <img src="{% static "img/my.jpg" %}" width="30%" height="150px"><br/><br/>RUCHI MAURYA<br>MObile no. 8090145676<br>EMAIL- ruchimaurya964@gmail.com
+<br/><br/><br/>
+                    Address- Varansi(chandwak,jaunpur)..
+            </div>
+                   <div class="col-md-6"style="min-height: 400px;background:lightcoral;border: 2px solid black;font-size: 20px;
+                   ;padding: 30px;margin: 20px 30px;text-align: left">
+                       <h1>ABOUT ME</h1><br/>
+                       Hello! My name is Ruchi Maurya .I am from Varansi.I am doing Diploma in GGPL .
+                       I am IT Stdudent.My Gole is to become a successful engineer.
+                   </div>
+        </div>
+        </div></div>
+</html>
+
+{% endblock content %}

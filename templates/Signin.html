@@ -1,0 +1,64 @@
+{% extends "master.html" %}
+{% load static %}
+{% block content %}
+
+
+    <div xmlns="http://www.w3.org/1999/html">
+    <head>
+<style>
+body{
+    background: hotpink;
+    background-image: url("{% static "bgg.jfif" %}");
+;
+}
+h1
+{
+    font-size: 30px;
+    font-family: "Arial Black";
+    color: #520202;
+background: border-box;
+}
+
+</style>
+
+      ><center>  <h1>**SignIn **</h1></center>
+ <div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2" style="min-height: 500px;background: hotpink"></div>
+
+
+        <div class="col-md-8" style="min-height: 500px ; background:hotpink">
+            <div class="row">
+                <div class="col-md-12" style="min-height: 50px;background:hotpink "></div>
+            </div>
+</center>
+            <div class="col-md-6" style="border:5px solid black; min-height: 350px;padding:30px 50px;background: white;border-radius:10px  ;font-size:20px;color:black;font-family: 'Arial Black';text-align: center;">
+
+                <h1>**Welcome To Study Zone**</h1>
+
+                Start Your 30 day free trial by  registering here.....
+                <p>**Join Us**.... </p>
+
+            </div>
+            <div class="col-md-6" style="border:5px solid black;padding:30px 50px;background: white;color:black;min-height: 350px;border-radius: 10px ;font-size:20px; text-align: center">
+                <h1>**SignIn Here**</h1><center>
+
+<form action="/SigninData/" method="post">
+    {% csrf_token %}
+    EMAIL   <input type="email"  name="aid" placeholder=" Enter Email here"><br><br>
+PASSWORD  <input type="PASSWORD"  name="passwd" class="fas fa-key" placeholder="Enter password here"><br><br>
+    <button type="Submit" >SignIn</button>
+</form>
+       </center>
+</div>
+
+</div>
+    </div>
+
+    </div>
+ </div>
+</html>
+
+
+
+{% endblock content %}
