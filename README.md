@@ -29,9 +29,6 @@ cd online-study-portal
 2. Set up a virtual environment
 It's a good practice to create a virtual environment to manage dependencies.
 
-bash
-Copy
-Edit
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 3. Install dependencies
