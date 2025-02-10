@@ -32,6 +32,7 @@ Django Rest Framework: For creating APIs (if required).
 
 git clone https://github.com/yourusername/online-study-portal.git
 cd online-study-portal
+
 2. Set up a virtual environment
 It's a good practice to create a virtual environment to manage dependencies.
 
